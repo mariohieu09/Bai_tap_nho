@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Nhap ten</p>
+    <input type="text" id="nhap" placeholder="Con vo ten gi?" />
+    <input type="button" onclick="Nhapten()" value="Nhap">
+    <br>
+<p id="result"></p>
+<script>
+    function Nhapten() {
+        let str = document.getElementById("nhap").value;
+        let strn = str.toLowerCase()
+        let array1 = strn.split(' ');
+        let newarray1 = [];
+
+        for(let x = 0; x < array1.length; x++){
+            newarray1.push(array1[x].charAt(0).toUpperCase() + array1[x].slice(1));
+        }
+        document.getElementById("result").innerHTML = newarray1.join(' ');
+    }
+
+
+</script>
+
+</body>
+</html>
